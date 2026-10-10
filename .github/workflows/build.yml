@@ -36,7 +36,7 @@ jobs:
 
       - name: Verify nvcc
         shell: cmd
-        run: "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc --version"
+        run: '"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc" --version'
 
       # torch той же версии/cuda, что в твоём venv — чтобы ABI совпал
       - name: Install torch cu128
