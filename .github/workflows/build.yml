@@ -56,6 +56,8 @@ jobs:
           set "CUDA_HOME=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8"
           set "PATH=%CUDA_HOME%\bin;%PATH%"
           set "TORCH_CUDA_ARCH_LIST=${{ inputs.arch-list }}"
+          set "DISTUTILS_USE_SDK=1"   # <-- Добавлено
+          set "MSSdk=1"  
           cd ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\custom_rasterizer
           python setup.py bdist_wheel
 
